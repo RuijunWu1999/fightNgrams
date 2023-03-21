@@ -65,16 +65,54 @@ Sub-function to get top 5 candidates with frequency greater than 40%, and anothe
 
 • How to run your trainer and spell checker
 
-to Run Trainer:
+Updated 2023 March 21
 
-corpus mode : python3 trainer.py example.pkl "Brown" -n 3
+Due to updates of some aspects of software enivronment:
 
-arpabetmode : python3 trainer.py example.pkl "X" --arpabetmode -n 2
+For cmd, python3 no longer available, but simply python still works
 
-to Run SpellChecker:
+Due to modifed argprase settings for boolean disabled flexible coding of "True" or "False"
 
-python3 spellchecker.py "example-tri.pkl" "testinputs.txt" "testoutputs.txt" False
-The last parameter has to be FALSE, since the interactive function not implemented. 
+trainer: 
+
+for cmd:
+
+corpus mode : python trainer.py example.pkl -c "Brown" -n 3
+
+arpabetmode : python trainer.py example.pkl "X" --arpabetmode -n 2
+
+for pycharm, edit run configuration:
+
+corpus mode : enter (example.pkl -c "Brown" -n 3) in parameter
+
+arpabetmode : enter (example.pkl "X" --arpabetmode -n 2) in parameter
+
+spellchecker:
+
+for cmd:
+
+cases with boolean "False" for interactive, 
+
+python spellchecker.py "example.pkl" "testinputs.txt" "testoutputs.txt"
+
+cases with boolean "True" for interactive, 
+
+python spellchecker.py "example.pkl" "testinputs.txt" "testoutputs.txt" --interactive
+
+for pycharm, edit run configuration:
+
+cases with boolean "False" for interactive, 
+
+enter ("example.pkl" "testinputs.txt" "testoutputs.txt") in parameter
+
+cases with boolean "True" for interactive, 
+
+enter ("example.pkl" "testinputs.txt" "testoutputs.txt" --interactive) in parameter
+
+For ordinary purpose:
+
+"--interactive" shouldn't be assigned, since the interactive function not implemented. 
+
 
 
 • Which extras you implemented

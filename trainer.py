@@ -118,7 +118,7 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser(description = "Train a Spellchecker")
     parser.add_argument("modelfname", help="file path to pickle file to write the trained spell checker model to")
     parser.add_argument("-c", "--corpustype", help="Specifies training corpus. Defaults to Brown if argument is omitted. If the corpus name is unrecognized, the program immediately exists", default="Brown")
-    parser.add_argument("-n", "--ngramtype", help="type of ngram to use in the overlap dictionary. Expects an int")
+    parser.add_argument("-n", "--ngramtype", type = int, help="type of ngram to use in the overlap dictionary. Expects an int")
     parser.add_argument("--arpabetmode", help="ignore corpus type argument. Loads the CMUDict and runs in arpabet mode instead.", action="store_true")
     ### YOU CAN ADD ADDITIONAL ARGUMENTS HERE
 
@@ -126,4 +126,4 @@ if __name__=="__main__":
     args = parser.parse_args()
 
     main(args.modelfname, args.corpustype, args.ngramtype, args.arpabetmode) # YOU CAN ADD ADDITIONAL ARGUMENTS HERE
-    #temp_main1()
+    # temp_main1()

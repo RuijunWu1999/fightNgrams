@@ -1,2 +1,2 @@
-throw ==> throw
-throough ==> through ; throughput ; throughout ; see-through ; bathrooms
+throw ==> ('throw', 0)
+throough ==> ('through', 1) ; ('throughout', 4) ; ('throughput', 4) ; ('see-through', 5) ; ('bathroom', 5)

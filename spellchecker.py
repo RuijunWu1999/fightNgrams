@@ -161,7 +161,9 @@ if __name__=="__main__":
     parser.add_argument("modelfname", help="file path to pickle file to read the trained spell checker model from")
     parser.add_argument("inputfname", help="File to spell check")
     parser.add_argument("outputfname", help="File to save corrected output to")
-    parser.add_argument("--interactive", help="Run in interactive mode (if implemented)", action="store_true")
+    parser.add_argument("--interactive", default = False, help="Run in interactive mode (if implemented)", action="store_true")
+
+    # parser.add_argument("--interactive", help="Run in interactive mode (if implemented)", action="store_true")
     ### YOU CAN ADD ADDITIONAL ARGUMENTS HERE
 
 
